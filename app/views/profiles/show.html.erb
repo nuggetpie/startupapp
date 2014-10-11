@@ -1,15 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <%= image_tag (@profile.picture_url(:standard)) %>
-<p>
-  <strong>First name:</strong>
-  <%= @profile.first_name %>
-</p>
 
 <p>
-  <strong>Last name:</strong>
-  <%= @profile.last_name %>
+<%= @profile.first_name %> <%= @profile.last_name %>
 </p>
+
 
 
 <p>
@@ -42,15 +38,19 @@
   <%= @profile.info %>
 </p>
 
+<% unless @profile.website.empty? %>
 <p>
   <strong>Website:</strong>
-  <%= @profile.website %>
+  <%= link_to "9gag.com", @profile.website, target: '_blank' %>
 </p>
+<% end %>
 
+<% unless @profile.twitter.empty? %>
 <p>
   <strong>Twitter:</strong>
   <%= @profile.twitter %>
 </p>
+<% end %>
 
 <p>
   <strong>Facebook:</strong>
@@ -63,8 +63,8 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @profile.user %>
+  <strong>Email:</strong>
+  <%= @profile.user.email %>
 </p>
 
 <% if user_signed_in? %>
