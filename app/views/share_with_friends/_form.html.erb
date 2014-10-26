@@ -1,0 +1,22 @@
+<%= simple_form_for(@share_with_friend) do |f| %>
+  <%= f.error_notification %>
+
+  
+  <div class="form-group">
+    <%= f.association :friends, input_html: {class: 'form-control'} %>
+  </div>
+  <div class="form-group">
+    <%= f.association :collection_name, input_html: {class: 'form-control'} %>
+  </div>
+  <div class="form-group">
+    <%= f.association :shop_name, input_html: {class: 'form-control'} %>
+  </div>
+  <div class="form-group">
+    <%= f.association :shop_product, input_html: {class: 'form-control'} %>
+  </div>
+  
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

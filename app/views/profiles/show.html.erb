@@ -1,75 +1,51 @@
+<br>
+<div class="row">
+	<div class='col-md-8 col-md-offset-2'>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h1 class="panel-title"><span class="glyphicon glyphicon-user"></span> Your Profile
+				<hr>
+			</div>
+
+<div class='row'>
 <p id="notice"><%= notice %></p>
 
-<%= image_tag (@profile.picture_url(:standard)) %>
+    
+    
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-6">
+			<h2><%= @profile.first_name %> <%= @profile.last_name %></h2>
+		</div>
+<br>
+		<div class="col-md-6">         
+			<strong>Interest:</strong>
+  				<%= @profile.interest %>
+			</div>
 
-<p>
-<%= @profile.first_name %> <%= @profile.last_name %>
-</p>
+		<div class="col-md-6">
+  			<strong>Gender:</strong>
+  				<%= @profile.gender %>
+		</div>
 
+		<div class="col-md-6">
+			<strong>Friends:</strong>
+  				<%= @profile.friends %>
+		</div>
 
-
-<p>
-  <strong>City:</strong>
-  <%= @profile.city %>
-</p>
-
-<p>
-  <strong>Country:</strong>
-  <%= @profile.country %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @profile.phone %>
-</p>
-
-<p>
+			<div class="col-md-6">
+          
   <strong>Dob:</strong>
   <%= @profile.dob %>
-</p>
+</div>
 
-<p>
-  <strong>Tagline:</strong>
-  <%= @profile.tagline %>
-</p>
 
-<p>
-  <strong>Info:</strong>
-  <%= @profile.info %>
-</p>
-
-<% unless @profile.website.empty? %>
-<p>
-  <strong>Website:</strong>
-  <%= link_to "9gag.com", @profile.website, target: '_blank' %>
-</p>
-<% end %>
-
-<% unless @profile.twitter.empty? %>
-<p>
-  <strong>Twitter:</strong>
-  <%= @profile.twitter %>
-</p>
-<% end %>
-
-<p>
-  <strong>Facebook:</strong>
-  <%= @profile.facebook %>
-</p>
-
-<p>
-  <strong>Linkedin:</strong>
-  <%= @profile.linkedin %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @profile.user.email %>
-</p>
 
 <% if user_signed_in? %>
 <% if current_user == @profile.user %>
 <%= link_to 'Edit', edit_profile_path(@profile), class: 'btn btn-warning'%>
+<%= link_to 'Home', root_path, class: 'btn btn-success' %>
 <% end %>
 <% end %>
 

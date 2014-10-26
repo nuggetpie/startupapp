@@ -1,0 +1,41 @@
+<%= simple_form_for(@shop_profile) do |f| %>
+  <%= f.error_notification %>
+
+  <div class='row'>
+    
+    
+    <div class="col-md-8">
+      <div class="row">
+        
+        <div class="col-md-6">
+          <div class="form-group">
+             <%= f.input :shop_owner, input_html: {class: 'form-control'} %>
+          </div>
+          
+        <div class="col-md-6">  
+          <div class="form-group">
+            <%= f.input :shop_name, input_html: {class: 'form-control'} %>
+          </div>
+        </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="form-group">
+            <%= f.input :shop_product, input_html: {class: 'form-control'} %>
+         </div>
+        
+
+        <div class="form-group">
+            <%= f.input :shop_category, input_html: {class: 'form-control'} %>
+        </div>
+  
+        <div class="form-group">
+            <%= f.input :shop_keyword, input_html: {class: 'form-control'} %>
+       </div>
+  
+
+      <div class="form-actions">
+          <%= f.button :submit %>
+      </div>
+<% end %>

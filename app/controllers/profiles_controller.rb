@@ -20,7 +20,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1/edit
   def edit
     @profile=current_user.profile
-    authorize! :manage, @article
+    authorize! :manage, @profile
   end
 
   # POST /profiles
@@ -38,6 +38,7 @@ class ProfilesController < ApplicationController
       end
     end
   end
+
 
   # PATCH/PUT /profiles/1
   # PATCH/PUT /profiles/1.json
@@ -72,6 +73,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:first_name, :last_name, :picture, :city, :country, :phone, :dob, :tagline, :info, :website, :twitter, :facebook, :linkedin, :user_id)
+      params.require(:profile).permit(:first_name, :last_name, :gender, :dob, :interest, :friends, :collection_name_id, :shop_product_id)
     end
 end

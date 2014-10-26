@@ -1,0 +1,28 @@
+<br>
+<div class="row">
+	<div class='col-md-8 col-md-offset-2'>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h1 class="panel-title"><span class="glyphicon glyphicon-edit"></span> Edit Your Profile
+				<hr>
+			</div>
+				
+			<div class="panel-body">
+					<%= render 'form' %>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="col-md-1">
+			<%= link_to 'Show', @shop_profile, class: 'btn btn-success btn-lg' %> 
+		</div>
+		<div class="col-md-1">	
+			<%= link_to 'Back', shop_profiles_path, class: 'btn btn-success btn-lg' %>
+		</div>
+	</div>
+</div>
+<hr>

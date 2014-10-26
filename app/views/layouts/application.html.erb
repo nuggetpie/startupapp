@@ -15,12 +15,14 @@
   <%= csrf_meta_tags %>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
-<body style='padding-top: 50px;'>
+<body style='padding-top: 100px;'>
 <%= render 'layouts/navbar' %>
-<div class='container'>
+<%= render 'layouts/sidebar' %>
+	
+	
 
 <%= yield %>
-</div>
+
 
 </body>
 </html>

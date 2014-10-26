@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  friends_id: 
+  collection_name_id: 
+  shop_name_id: 
+  shop_product_id: 
+
+two:
+  friends_id: 
+  collection_name_id: 
+  shop_name_id: 
+  shop_product_id: 

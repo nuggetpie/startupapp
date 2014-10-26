@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Collection name:</strong>
+  <%= @collection.collection_name %>
+</p>
+
+<p>
+  <strong>Collection category:</strong>
+  <%= @collection.collection_category %>
+</p>
+
+<p>
+  <strong>Shop name:</strong>
+  <%= @collection.shop_name %>
+</p>
+
+<p>
+  <strong>Shop product:</strong>
+  <%= @collection.shop_product %>
+</p>
+
+<%= link_to 'Edit', edit_collection_path(@collection) %> |
+<%= link_to 'Back', collections_path %>

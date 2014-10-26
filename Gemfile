@@ -12,8 +12,7 @@ gem 'country_select'
 gem 'friendly_id'
 gem 'cancancan','~> 1.9'
 gem 'rolify'
-gem 'carrierwave'
-gem 'cloudinary'
+
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= @shop_profile.shop_name %></strong>
+
+</p>
+
+<p>
+  <strong>Shop owner:</strong>
+  <%= @shop_profile.shop_owner %>
+</p>
+
+
+
+<p>
+  <strong>Shop product:</strong>
+  <%= @shop_profile.shop_product %>
+</p>
+
+<p>
+  <strong>Shop category:</strong>
+  <%= @shop_profile.shop_category %>
+</p>
+
+<p>
+  <strong>Shop keyword:</strong>
+  <%= @shop_profile.shop_keyword %>
+</p>
+
+<%= link_to 'Edit', edit_shop_profile_path(@shop_profile) %> |
+<%= link_to 'Back', shop_profiles_path %>

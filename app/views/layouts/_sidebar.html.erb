@@ -1,0 +1,22 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+
+<% if user_signed_in? %>
+<nav id="myNavmenu" class="navmenu navmenu-inverse navmenu-fixed-right offcanvas" role="navigation">
+  <a class="navmenu-brand" href="#">Notifications</a>
+  <ul class="nav navmenu-nav">
+    <li class="active"><a href="#"><strong>Friends activities</strong></a></li>
+    <li><a href="<%= profile_path(current_user.profile)%>">Nick Cage bought a shirt at Fashion.com</a></li>
+    <li class="active"><a href="#">Coming sale offers</a></li>
+    <li><a href="#">3 days sale at XXX shop</a></li>
+    <li class="active"><a href="#">Coupons expiration</a></li>
+    <li><a href="#">'10% off' coupon for XXX shop is expiring in 3 days</a></li>
+  </ul>
+</nav>
+<% end %>
+
+  
+

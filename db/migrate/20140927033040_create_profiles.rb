@@ -3,18 +3,13 @@ class CreateProfiles < ActiveRecord::Migration
     create_table :profiles do |t|
       t.string :first_name
       t.string :last_name
-      t.string :picture
-      t.string :city
-      t.string :country
-      t.string :phone
-      t.date :dob
-      t.string :tagline
-      t.text :info
-      t.string :website
-      t.string :twitter
-      t.string :facebook
-      t.string :linkedin
-      t.references :user, index: true
+      t.string :gender
+      t.string :dob
+      t.string :interest
+      t.string :friends
+      t.references :collection_name, index: true
+      t.references :shop_product, index: true
+      t.integer :user_id
 
       t.timestamps
     end
